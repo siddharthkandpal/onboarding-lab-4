@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.24)
 
+if(NYU_BUILD_TESTS)
+  enable_testing()
+  add_subdirectory(dv)
+endif()
 
 if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
   include(FetchContent)

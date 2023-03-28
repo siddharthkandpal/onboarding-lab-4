@@ -20,7 +20,3 @@ module Exercise1 (
       3: out = ~(a & b);
     endcase
 endmodule
-
-
-
-cba

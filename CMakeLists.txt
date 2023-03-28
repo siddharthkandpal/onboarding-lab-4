@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.24)
 
-add_library(lab4 INTERFACE)
+
 if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
   include(FetchContent)
   FetchContent_Declare(
@@ -22,3 +22,5 @@ add_custom_target(UpdateVcpkgBaseline
 )
 
 project(week-four-lab VERSION 1.0.0)
+find_package(nyu-cmake CONFIG REQUIRED)
+add_library(lab4 INTERFACE)

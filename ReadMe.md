@@ -1,3 +1,5 @@
+#Q&A
+
 * What is a registry?
 
 Collection of information about packages (could be various formats) which we intend to use for the project.

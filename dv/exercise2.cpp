@@ -15,7 +15,7 @@ struct LFSR {
   
   void step() {
     uint16_t bits = value & mask;
-    value = (value << 1) | (std::popcount(bits) & 1);
+    value = (value << 1) | ((bits) & 1);
   }
 };
 
@@ -35,9 +35,9 @@ void step(VExercise2& model) {
 void test_initial_value(uint16_t init) {
   VExercise2 model;
   model.init = init;
-  model.nReset = 0;
+  model.reset = 0;
   step(model);
-  model.nReset = 1;
+  model.reset = 1;
 
   LFSR lfsr {init};
 
@@ -47,7 +47,7 @@ void test_initial_value(uint16_t init) {
     lfsr.step();
   }
 
-  model.nReset = 0;
+  model.reset = 0;
   step(model);
   REQUIRE(model.out == init);
 }

@@ -85,12 +85,12 @@ TEST_CASE("Test Random") {
   model.a = rand4(re);
   model.b = rand16(re);
   model.c = rand16(re);
-  model.nReset = 0;
+  model.reset = 0;
   step(model);
 
   REQUIRE(model.out == sim.reset(model.a, model.b, model.c));
 
-  model.nReset = 1;
+  model.reset = 1;
 
   for(size_t cycles {0}; cycles < 100; ++cycles) {
     model.a = rand4(re);
